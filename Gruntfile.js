@@ -59,8 +59,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('lint', ['htmlhint','csslint','eslint']);
-  grunt.registerTask('unitTest', ['mocha'])
-  grunt.resterTask('minify', ['htmlmin', 'cssmin', 'uglify']);
+  grunt.registerTask('unitTest', ['mocha']);
+  grunt.registerTask('minify', ['htmlmin', 'cssmin', 'uglify']);
 };
 
 
