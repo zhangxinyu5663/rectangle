@@ -1,7 +1,7 @@
 #main{
   font-size:1.1em;
   margin:50px auto;
-  width: 370px;
+  width: 500px;
 }
 
 input,label{
@@ -20,14 +20,6 @@ span {
 
 #width-validation,#height-validation{
   color:red;
-  position:absolute;
   width:200px;
   height:25px;
-  right:60px;
-}
-#width-validation{
-  top:95px;
-}
-#height-validation{
-  top:55px;
 }
