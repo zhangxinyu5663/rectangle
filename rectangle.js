@@ -1,4 +1,5 @@
 /* global Rectangle: true */
+/* global valid: true */
 $(function(){
   var $width=$('#width'),
       $height=$('#height'),
@@ -7,6 +8,25 @@ $(function(){
       $area=$('#area'),
       $widthValidation=$('#width-validation'),
       $heightValidation=$('#height-validation');
+
+  
+  $width.keypress(function(e){
+    if(/[abcdf-zABCDF-Z`~!@#$%^&*()=_+[\]{}|;:'",<>/?\\]/.test(e.key)){
+      e.preventDefault();
+    }
+    if(e.key==='.'){
+      if(e.target.value==='') e.preventDefault();
+
+      if(e.target.value.indexOf('.')!==-1){
+        e.preventDefault();
+      }else{
+        if(e.target.selectionStart===0){
+          e.preventDefault();
+        }
+      } 
+    }
+  });
+  
 
   $width.focusout(function(){
     //var w=$width.val();
@@ -25,7 +45,7 @@ $(function(){
     if(!result.isOK){
       $heightValidation.html('高度'+result.reason);
       $height.select();
-      return;
+      //return;
     }else{
       $heightValidation.html('');
     }
