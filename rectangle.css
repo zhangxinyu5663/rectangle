@@ -19,8 +19,11 @@ span {
   width:70px;
 }
 
-#width-validation,#height-validation{
+input:valid+span:after{
+  content:"√";
+  color:green;
+}
+input:invalid+span:after{
+  content:"×";
   color:red;
-  width:200px;
-  height:25px;
 }
