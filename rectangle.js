@@ -1,4 +1,5 @@
 /* global Rectangle: true */
+/* global valid: true */
 $(function(){
   var $width=$('#width'),
       $height=$('#height'),
@@ -31,6 +32,7 @@ $(function(){
     }
   });
 
+  //集中校验
   $btnCal.click(function(){
     var w=$width.val(),
         h=$height.val();
